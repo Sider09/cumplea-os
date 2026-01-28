@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>¡Feliz Cumpleaños Raiza!</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <!-- Animation Library (AOS) -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Animation Elements -->
+    <div class="bg-shape shape-1"></div>
+    <div class="bg-shape shape-2"></div>
+    <div class="bg-shape shape-3"></div>
+
+    <main class="container">
+
+        <!-- Hero Section -->
+        <header class="heroglass" data-aos="zoom-in" data-aos-duration="1000">
+            <h1 class="title">¡Feliz Cumpleaños Raiza!</h1>
+            <p class="subtitle">Para la mejor hermana del mundo ❤️</p>
+            <div class="hero-message" data-aos="fade-up" data-aos-delay="200">
+                <p>Feliz cumpleaños de parte de tu hermano favorito(el unico) no me expreso mucho pero de verdad te
+                    aprecia arto</p>
+                <button class="celebrate-btn" onclick="celebrate()">🎉 ¡Celebrar!</button>
+            </div>
+        </header>
+
+        <!-- Gallery Section -->
+        <section class="gallery-section">
+            <h2 class="section-title" data-aos="fade-down">Momentos Inolvidables</h2>
+            <div class="gallery-grid">
+                <!-- Photo Card 1 -->
+                <div class="photo-card" onclick="openModal('img/05e3d1ec-016b-4f25-aa0c-fe5f93771b33.jpg')"
+                    data-aos="fade-up">
+                    <div class="image-wrapper">
+                        <img src="img/05e3d1ec-016b-4f25-aa0c-fe5f93771b33.jpg" alt="Foto 1" loading="lazy">
+                    </div>
+                </div>
+                <!-- Photo Card 2 -->
+                <div class="photo-card large" onclick="openModal('img/1471e140-a0d9-48da-8c5e-cf731917af1f.jpg')"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="image-wrapper">
+                        <img src="img/1471e140-a0d9-48da-8c5e-cf731917af1f.jpg" alt="Foto 2" loading="lazy">
+                    </div>
+                </div>
+                <!-- Photo Card 3 -->
+                <div class="photo-card" onclick="openModal('img/1c418138-67f2-4d9c-919f-331452d1b8c5.jpg')"
+                    data-aos="fade-up" data-aos-delay="200">
+                    <div class="image-wrapper">
+                        <img src="img/1c418138-67f2-4d9c-919f-331452d1b8c5.jpg" alt="Foto 3" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="photo-card text-card" data-aos="flip-left" data-aos-delay="300">
+                    <p>✨ Feliz cumpleaños estupidaa</p>
+                </div>
+
+                <!-- Photo Card 4 -->
+                <div class="photo-card" onclick="openModal('img/982c09d8-6db0-4568-82e9-64b8c8ef70c2.jpg')"
+                    data-aos="fade-up">
+                    <div class="image-wrapper">
+                        <img src="img/982c09d8-6db0-4568-82e9-64b8c8ef70c2.jpg" alt="Foto 4" loading="lazy">
+                    </div>
+                </div>
+                <!-- Photo Card 5 -->
+                <div class="photo-card large" onclick="openModal('img/b658c40b-6d29-4134-8b04-d3a67abbf7ec.jpg')"
+                    data-aos="fade-up" data-aos-delay="100">
+                    <div class="image-wrapper">
+                        <img src="img/b658c40b-6d29-4134-8b04-d3a67abbf7ec.jpg" alt="Foto 5" loading="lazy">
+                    </div>
+                </div>
+
+                <div class="photo-card text-card" data-aos="flip-right" data-aos-delay="200">
+                    <p>🎉 OLEEEE!</p>
+                </div>
+
+                <!-- Photo Card 6 -->
+                <div class="photo-card" onclick="openModal('img/c9b6b299-32ff-4da6-ab51-0f31f2f5f0f9.jpg')"
+                    data-aos="fade-up" data-aos-delay="150">
+                    <div class="image-wrapper">
+                        <img src="img/c9b6b299-32ff-4da6-ab51-0f31f2f5f0f9.jpg" alt="Foto 6" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Photo Card 7 -->
+                <div class="photo-card" onclick="openModal('img/d4991d2a-b143-4fdb-a13f-f03bb1f1bbce.jpg')"
+                    data-aos="fade-up" data-aos-delay="250">
+                    <div class="image-wrapper">
+                        <img src="img/d4991d2a-b143-4fdb-a13f-f03bb1f1bbce.jpg" alt="Foto 7" loading="lazy">
+                    </div>
+                </div>
+
+                <!-- Photo Card 8 (New) -->
+                <div class="photo-card" onclick="openModal('img/39688ab9-680e-4b44-8505-dc38343ef121.jpg')"
+                    data-aos="fade-up" data-aos-delay="300">
+                    <div class="image-wrapper">
+                        <img src="img/39688ab9-680e-4b44-8505-dc38343ef121.jpg" alt="Foto 8" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer / Wish -->
+        <footer class="wish-footer" data-aos="fade-in">
+            <p>Con mucho cariño, para Raiza ❤️</p>
+        </footer>
+
+    </main>
+
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
